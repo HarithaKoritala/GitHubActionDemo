@@ -42,7 +42,7 @@ jobs:
         uses: azure/login@v1
         with:
           client-id: "458ab565-191b-4866-8942-d8541995591e"
-          client-secret: "RX18Q~eXas55dRBTgcyZsz-a1ZRCurStWtwzUbeV"
+          subscription-id: "9fc8123d-3dd2-4760-8497-3848708caa37"
           tenant-id: "01680bae-18f9-4b1a-a69a-609c68edb161"
           
       - name: Deploy code to Azure App Service
