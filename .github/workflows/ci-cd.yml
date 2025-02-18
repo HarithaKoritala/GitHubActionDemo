@@ -21,7 +21,7 @@ jobs:
     - name: Build with Maven # Step to build the project with Maven
       run: mvn clean install -DskipTests
     - name: Upload Artifact for deployment job
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: GitHubActionDemo
         path: ${{github.workspace}}/target/*.jar
@@ -31,16 +31,16 @@ jobs:
     needs: build
     steps:
       - name: Download Artifact from build job
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           name: GitHubActionDemo
       - name: Deploy code to Azure App Service
-        uses: azure/webapps-deploy@v2
+        uses: azure/webapps-deploy@v3
       - name: Set up Azure CLI
-        uses: azure/setup-azurecli@v2
+        uses: azure/setup-azurecli@v3
 
       - name: Log in to Azure
-        uses: azure/login@v1
+        uses: azure/login@v3
         with:
           app-name: GitHubActionDemoAppl
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
