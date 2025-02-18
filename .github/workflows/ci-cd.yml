@@ -46,6 +46,3 @@ jobs:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
           client-secret: ${{ secrets.AZURE_CLIENT_SECRET }}
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
-      - name: Deploy to Azure App Service
-        run: |
-          az webapp deploy --resource-group gittaction-integrate-rg --name GitHubActionDemoAppl --src-path ${{github.workspace}}/target/*.jar --type jar
