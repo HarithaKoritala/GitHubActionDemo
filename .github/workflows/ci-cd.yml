@@ -36,7 +36,7 @@ jobs:
           name: GitHubActionDemo # The name of your artifact
 
       - name: Set up Azure CLI
-        uses: azure/setup-azurecli@v2
+        uses: azure/setup-azure-cli@v2
 
       - name: Log in to Azure
         uses: azure/login@v1
